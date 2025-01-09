@@ -12,6 +12,7 @@ services:
     - "13001:3000"
     # command: sh -c "npm install --force && npm run build && npm run start"
     command: sh -c "npm install && npm run start"
+    restart: unless-stopped
     environment:
       - NODE_ENV=production
     networks:
